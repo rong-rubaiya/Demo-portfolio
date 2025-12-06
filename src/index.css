@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* Light theme */
+body {
+  background-color: #f8f4ff;
+  color: #1a1a1a;
+}
+
+/* Dark theme */
+[data-theme="dark"] body {
+  background-color: #0b0b1e;
+  color: #f8f4ff;
+}
+
+/* Example for navbar */
+nav {
+  transition: background-color 0.3s, color 0.3s;
+}
