@@ -35,7 +35,7 @@ const skills = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="px-6 py-20 bg-black text-gray-200">
+    <section id="skills" className="px-6 py-20 ">
       <h2 className="text-5xl font-bold mb-12 text-[#f89ff8]  text-center">Skills</h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

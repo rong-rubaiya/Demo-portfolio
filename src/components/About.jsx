@@ -1,102 +1,84 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { FaLaptopCode, FaBullseye, FaBook, FaTools, FaDatabase } from "react-icons/fa";
 
 const skills = {
   Languages: ["JavaScript", "C++"],
   Frontend: ["HTML", "CSS", "React.js", "Next.js", "Tailwind CSS", "React Router"],
-  Backend: ["Node.js", "Express.js", "Authentication (Firebase)"],
+  Backend: ["Node.js", "Express.js", "Firebase Auth"],
   Database: ["MongoDB"],
   Tools: ["GitHub", "Firebase", "Postman", "VS Code", "Figma"],
 };
 
 const About = () => {
   return (
-    <section id="about" className="px-6 py-20 bg-black text-gray-200 relative">
+    <section id="about" className="w-11/12 mx-auto py-20 relative text-gray-800 dark:text-gray-200">
       {/* Heading */}
-      <motion.h2
-        className="text-5xl font-bold mb-16 text-[#f89ff8] text-center"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+      <h2 className="text-5xl font-bold mb-20 text-center text-[#750075] dark:text-[#f89ff8]">
         About Me
-      </motion.h2>
+      </h2>
 
-      {/* Profile & Goals Section */}
-      <div className="grid md:grid-cols-2 gap-12 mb-16">
-        <motion.div
-          className="bg-gray-100/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-lg"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="text-2xl font-semibold text-[#f89ff8] mb-4">🌟 Profile</h3>
-          <p className="text-gray-200/80 leading-relaxed text-lg">
-            I am a passionate and self-motivated developer, always eager to learn, explore new technologies, and solve challenging problems. I strive to improve myself every day and take on tasks that push my limits.
+      {/* Timeline Sections */}
+      <div className="relative border-l-4 border-[#f89ff8] dark:border-[#750075] ml-6 pl-10 space-y-16">
+        
+        {/* Profile */}
+        <div>
+          <div className="flex items-center gap-3 mb-3 text-[#750075] dark:text-[#f89ff8]">
+            <FaLaptopCode size={28} />
+            <h3 className="text-2xl font-semibold">Professional Profile</h3>
+          </div>
+          <p className="text-lg leading-relaxed">
+            I am a dedicated full-stack developer who transforms complex problems into elegant digital solutions. 
+            I continuously explore new technologies to build scalable, efficient, and user-centric web applications.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="bg-gray-100/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-lg"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="text-2xl font-semibold text-[#f89ff8] mb-4">🎯 Goals</h3>
-          <ul className="list-disc list-inside text-gray-200/70 space-y-2 text-lg">
-            <li>Own a successful software company</li>
-            <li>Become a skilled full-stack (MERN) developer</li>
-            <li>Build meaningful and effective solutions in technology</li>
+        {/* Goals */}
+        <div>
+          <div className="flex items-center gap-3 mb-3 text-[#750075] dark:text-[#f89ff8]">
+            <FaBullseye size={28} />
+            <h3 className="text-2xl font-semibold">Career Goals</h3>
+          </div>
+          <ul className="list-disc list-inside space-y-2 text-lg">
+            <li>Lead innovative software projects with tangible impact</li>
+            <li>Master full-stack (MERN) and cloud technologies</li>
+            <li>Deliver applications that solve real-world challenges</li>
           </ul>
-          <p className="mt-4 italic text-gray-200/50">“Dream big, code smart, and leave a mark in the tech world!” 💻✨</p>
-        </motion.div>
-      </div>
+          <p className="italic text-gray-500 dark:text-gray-400 mt-2">
+            “Code with purpose, innovate constantly, and deliver excellence.”
+          </p>
+        </div>
 
-      {/* Current Learning & Activities */}
-      <motion.div
-        className="bg-gray-100/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-8 shadow-lg mb-16"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h3 className="text-2xl font-semibold text-[#f89ff8] mb-4">📚 Current Activities</h3>
-        <ul className="list-disc list-inside text-gray-200/70 space-y-2 text-lg">
-          <li>🛠️ Working on real-world projects</li>
-          <li>📚 Learning & practicing Backend + API development</li>
-          <li>💡 Learning daily, exploring new technologies, and building real projects 🚀</li>
-        </ul>
-      </motion.div>
+        {/* Current Focus */}
+        <div>
+          <div className="flex items-center gap-3 mb-3 text-[#750075] dark:text-[#f89ff8]">
+            <FaBook size={28} />
+            <h3 className="text-2xl font-semibold">Current Focus</h3>
+          </div>
+          <p className="text-lg leading-relaxed">
+            Building full-stack applications, improving backend & API skills, 
+            exploring scalable development patterns, and delivering polished products.
+          </p>
+        </div>
+      </div>
 
       {/* Skills Section */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {Object.keys(skills).map((category) => (
-          <motion.div
-            key={category}
-            className="bg-gray-100/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
-            whileHover={{ scale: 1.05, rotate: 1 }}
-          >
-            <h4 className="text-xl font-semibold text-[#f89ff8] mb-4 text-center">{category}</h4>
-            <ul className="list-disc list-inside space-y-2 text-gray-200/80 text-center">
-              {skills[category].map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
+      <div className="mt-20">
+        <h3 className="text-2xl font-semibold mb-6 text-[#750075] dark:text-[#f89ff8] flex items-center gap-3">
+          <FaTools size={28} /> My Development Arsenal
+        </h3>
+        <div className="flex flex-wrap gap-4">
+          {Object.keys(skills).map((category) =>
+            skills[category].map((skill) => (
+              <span
+                key={skill}
+                className="px-4 py-2 rounded-full bg-gradient-to-r from-[#f89ff8]/50 to-[#750075]/50 dark:from-[#750075]/50 dark:to-[#f89ff8]/50 text-[#750075] dark:text-[#f89ff8] font-medium shadow-lg"
+              >
+                {skill}
+              </span>
+            ))
+          )}
+        </div>
       </div>
-
-      {/* Neon Floating Circles for decoration */}
-      <motion.div
-        className="absolute w-24 h-24 bg-[#f89ff8]/20 rounded-full top-10 left-10 blur-3xl"
-        animate={{ y: [0, 20, 0] }}
-        transition={{ duration: 6, repeat: Infinity }}
-      />
-      <motion.div
-        className="absolute w-32 h-32 bg-[#f89ff8]/10 rounded-full bottom-20 right-16 blur-3xl"
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
     </section>
   );
 };

@@ -29,7 +29,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="px-6 py-20 bg-black text-gray-200">
+    <section id="contact" className="px-6 py-20">
       <motion.h2
         className="text-5xl font-bold mb-12 text-[#f89ff8] text-center"
         initial={{ opacity: 0, y: -50 }}

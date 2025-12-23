@@ -30,7 +30,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="px-18 py-20 bg-black text-gray-200">
+    <section id="projects" className="px-18 py-20">
       <h2 className="text-5xl font-bold mb-12 text-[#f89ff8] text-center">Projects</h2>
 
       {/* Projects Grid */}
