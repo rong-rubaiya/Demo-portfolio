@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Livento from "../assets/livento.png"
+import MealMate from "../assets/mealmate.png"
 
 const projects = [
   {
     title: "Livento",
     description:
       "Livento is a dynamic real estate platform where property owners can list rentals or sale properties and users can browse, search, and filter properties easily.",
-    images: ["/src/assets/livento.png"],
+    images: [Livento],
     liveLink: "https://livento-ass-10.web.app/",
     githubLink: "https://github.com/rong-rubaiya/livento",
   },
@@ -15,7 +17,7 @@ const projects = [
     title: "Meal-Mate",
     description:
       "Meal-Mate is a modern web application to discover and order meals. Built using React.js and Next.js with a focus on performance and UI.",
-    images: ["/src/assets/mealmate.png"],
+    images: [MealMate],
     liveLink: "https://meal-mate-client-side.vercel.app",
     githubLink: "https://github.com/rong-rubaiya/meal-mate-client-side",
   },
