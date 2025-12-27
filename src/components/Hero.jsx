@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Swal from "sweetalert2";
 import imgPro from "../assets/received_955120399147056.jpeg";
 
@@ -43,7 +43,7 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center px-6 py-28"
     >
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 md:gap-20">
+      <div className=" w-11/12 mx-auto  grid md:grid-cols-2 gap-12 md:gap-20">
 
         {/* LEFT */}
         <div className="
@@ -112,11 +112,17 @@ const Hero = () => {
 
 
           {/* SOCIALS */}
-          <div className="flex gap-6 mt-8 text-2xl">
-            <a className="hover:text-[#f89ff8] transition-colors"><FaGithub /></a>
-            <a className="hover:text-[#f89ff8] transition-colors"><FaLinkedin /></a>
-            <a className="hover:text-[#f89ff8] transition-colors"><FaTwitter /></a>
-          </div>
+          <div className="flex gap-4 text-2xl mt-6">
+                      <a href="https://github.com/rong-rubaiya" className="hover:text-violet2 transition-colors">
+                        <FaGithub />
+                      </a>
+                      <a href="https://www.linkedin.com/in/rubaiya-hamid/" className="hover:text-violet2 transition-colors">
+                        <FaLinkedin />
+                      </a>
+                      <a href="https://www.facebook.com/rubaiya.hamid.3" className="hover:text-violet2 transition-colors">
+                        <FaFacebook />
+                      </a>
+                    </div>
         </div>
 
         {/* RIGHT */}

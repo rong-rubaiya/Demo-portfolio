@@ -62,7 +62,7 @@ const About = () => {
       </div>
 
       {/* Skills Section */}
-      <div className="mt-20">
+      <div className="mt-20 w-11/12 mx-auto">
         <h3 className="text-2xl font-semibold mb-6 text-[#750075] dark:text-[#f89ff8] flex items-center gap-3">
           <FaTools size={28} /> My Development Arsenal
         </h3>
